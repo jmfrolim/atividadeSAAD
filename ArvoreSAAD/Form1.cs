@@ -16,7 +16,7 @@ namespace ArvoreSAAD
         public Form1()
         {
             InitializeComponent();
-            PlayTennis play = new PlayTennis();
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -41,9 +41,9 @@ namespace ArvoreSAAD
             ArrayList comboHumi = new ArrayList();
             comboHumi.Add(new drop("High",1));
             comboHumi.Add(new drop("Normal",2));
-            cboHumidade.DataSource = comboHumi;
-            cboHumidade.DisplayMember = "Nome";
-            cboHumidade.ValueMember = "Valor";
+            cboUmidade.DataSource = comboHumi;
+            cboUmidade.DisplayMember = "Nome";
+            cboUmidade.ValueMember = "Valor";
 
             ArrayList comboVento = new ArrayList();
             comboVento.Add(new drop("Strong", 1));
@@ -65,6 +65,15 @@ namespace ArvoreSAAD
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
+        }
+
+        private void buttonPlayTennis_Click(object sender, EventArgs e)
+        {
+            PlayTennis play = new PlayTennis();
+            cboTemperatura.SelectedItem = play.temperatura;
+            play.Tempo =(string) cboTempo.SelectedItem;
+            play.umidade = (string) cboUmidade.SelectedItem;
+            play.vento = (string) cboVento.SelectedItem;
         }
     }
 }
