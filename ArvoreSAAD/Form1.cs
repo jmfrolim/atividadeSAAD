@@ -29,10 +29,28 @@ namespace ArvoreSAAD
             cboTempo.DisplayMember = "Nome";
             cboTempo.ValueMember = "Valor";
 
+            ArrayList comboTemp = new ArrayList();
+            comboTemp.Add(new drop("Hot",1));
+            comboTemp.Add(new drop("Mild",3));
+            comboTemp.Add(new drop("Cool",3));
+            cboTemperatura.DataSource = comboTemp;
+            cboTemperatura.DisplayMember = "Nome";
+            cboTemperatura.ValueMember = "Valor";
 
 
+            ArrayList comboHumi = new ArrayList();
+            comboHumi.Add(new drop("High",1));
+            comboHumi.Add(new drop("Normal",2));
+            cboHumidade.DataSource = comboHumi;
+            cboHumidade.DisplayMember = "Nome";
+            cboHumidade.ValueMember = "Valor";
 
-
+            ArrayList comboVento = new ArrayList();
+            comboVento.Add(new drop("Strong", 1));
+            comboVento.Add(new drop("Weak", 2));
+            cboVento.DataSource = comboVento;
+            cboVento.DisplayMember = "Nome";
+            cboVento.ValueMember = "Valor";
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -42,17 +60,11 @@ namespace ArvoreSAAD
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ArrayList comboTemp = new ArrayList();
-            comboTemp.Add("Hot");
-            comboTemp.Add("Mild");
-            comboTemp.Add("Cool");
+
         }
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ArrayList comboHumi = new ArrayList();
-            comboHumi.Add("High");
-            comboHumi.Add("Normal");
         }
     }
 }

@@ -36,6 +36,7 @@
             this.cboHumidade = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.cboVento = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -109,11 +110,21 @@
             this.cboVento.Size = new System.Drawing.Size(80, 21);
             this.cboVento.TabIndex = 7;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(65, 177);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(102, 23);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Posso Jogar ?";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(263, 230);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.cboVento);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.cboHumidade);
@@ -140,6 +151,7 @@
         private System.Windows.Forms.ComboBox cboHumidade;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cboVento;
+        private System.Windows.Forms.Button button1;
     }
 }
 
