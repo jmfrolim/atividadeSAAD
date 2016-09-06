@@ -8,16 +8,16 @@ namespace ArvoreSAAD
 {
     public class drop
     {
-        public drop(string nome, int valor)
+        public drop(string nome, string valor)
         {
             Nome = nome;
             Valor = valor;
         }
 
         string _nome;
-        int _valor;
+        string _valor;
 
-        public int Valor
+        public string Valor
         {
             get { return _valor; }
             set { _valor = value; }
